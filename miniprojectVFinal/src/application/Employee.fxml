@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="838.0" style="-fx-background-color: #142428;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EmployeeController">
+   <children>
+      <Button fx:id="updateBtn" layoutX="554.0" layoutY="75.0" mnemonicParsing="false" onAction="#update" prefHeight="233.0" prefWidth="71.0" text="Valider" />
+       <TableView fx:id="table" layoutX="256.0" layoutY="336.0" prefHeight="199.0" prefWidth="556.0">
+               <columns>
+                  <TableColumn fx:id="matCol" prefWidth="85.0" text="matricule" />
+                  <TableColumn fx:id="nomCol" prefWidth="106.0" text="nom" />
+                  <TableColumn fx:id="emailCol" prefWidth="163.0" text="email" />
+                  <TableColumn fx:id="catCol" minWidth="0.0" prefWidth="103.0" text="categorie" />
+                  <TableColumn fx:id="salaireCol" prefWidth="135.0" text="salaire" />
+               </columns>
+            </TableView>
+      <Button fx:id="exportBtn" layoutX="23.0" layoutY="535.0" mnemonicParsing="false" onAction="#exporter" prefHeight="24.0" prefWidth="90.0" text="Exporter" />
+      <Button fx:id="detailsBtn" layoutX="133.0" layoutY="535.0" mnemonicParsing="false" onAction="#details" prefHeight="24.0" prefWidth="90.0" text="Details" />
+      <TextArea fx:id="tfDetail" layoutX="23.0" layoutY="345.0" prefHeight="182.0" prefWidth="200.0" />
+      <Text fx:id="titre" fill="WHITE" layoutX="285.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Un Employee">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#d3cdcd" layoutX="202.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matricule">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfMat" layoutX="158.0" layoutY="77.0" prefHeight="37.0" prefWidth="154.0">
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="tfRec" layoutX="158.0" layoutY="152.0" prefHeight="37.0" prefWidth="154.0">
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </TextField>
+      <Text fill="#d3cdcd" layoutX="412.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfNom" layoutX="343.0" layoutY="77.0" prefHeight="37.0" prefWidth="173.0">
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="tfHsupp" layoutX="158.0" layoutY="218.0" prefHeight="37.0" prefWidth="154.0">
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="tfPHsupp" layoutX="341.0" layoutY="214.0" prefHeight="37.0" prefWidth="173.0">
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="tfEmail" layoutX="341.0" layoutY="152.0" prefHeight="37.0" prefWidth="173.0">
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </TextField>
+      <ChoiceBox fx:id="choiceEntreprise" layoutX="158.0" layoutY="280.0" prefHeight="25.0" prefWidth="362.0" />
+      <Text fill="#d3cdcd" layoutX="169.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Annee Recrutment">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#d3cdcd" layoutX="308.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entreprise">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#d3cdcd" layoutX="202.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hsupp">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#d3cdcd" layoutX="408.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#d3cdcd" layoutX="402.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PHsupp">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="addBtn" layoutX="554.0" layoutY="77.0" mnemonicParsing="false" onAction="#add" prefHeight="233.0" prefWidth="71.0" text="Ajouter" />
+      <Button fx:id="editBtn" layoutX="662.0" layoutY="281.0" mnemonicParsing="false" onAction="#edit" prefHeight="25.0" prefWidth="56.0" text="modifier" />
+      <Button fx:id="deleteBtn" layoutX="735.0" layoutY="281.0" mnemonicParsing="false" onAction="#delete" text="remove" />
+            
+           
+   </children>
+</AnchorPane>

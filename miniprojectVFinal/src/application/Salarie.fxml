@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="905.0" style="-fx-background-color: #142428;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SalarieController">
+   <children>
+       <TableView fx:id="table" layoutX="343.0" layoutY="43.0" prefHeight="540.0" prefWidth="471.0">
+               <columns>
+                  <TableColumn fx:id="matCol" prefWidth="75.0" text="matricule" />
+                  <TableColumn fx:id="nomCol" prefWidth="64.0" text="nom" />
+                  <TableColumn fx:id="emailCol" prefWidth="135.0" text="email" />
+                  <TableColumn fx:id="catCol" prefWidth="87.0" text="categorie" />
+                  <TableColumn fx:id="salaireCol" minWidth="0.0" prefWidth="109.0" text="salaire" />
+               </columns>
+            </TableView>
+      <Button fx:id="catBtn" layoutX="98.0" layoutY="82.0" mnemonicParsing="false" onAction="#listCat" prefHeight="25.0" prefWidth="149.0" text="lister par categorie " />
+      <Button fx:id="maxTauxBtn" layoutX="98.0" layoutY="192.0" mnemonicParsing="false" onAction="#MaxVente" text="Vendeur Max Taux Vente" />
+      <Button fx:id="ancienteBtn" layoutX="98.0" layoutY="132.0" mnemonicParsing="false" onAction="#listAnciennete" prefHeight="25.0" prefWidth="149.0" text="lister par anciente" />
+      <Button fx:id="minMaxBtn" layoutX="98.0" layoutY="313.0" mnemonicParsing="false" onAction="#MinMax" prefHeight="25.0" prefWidth="149.0" text="Lister " />
+      <Button fx:id="minSalaireBtn" layoutX="98.0" layoutY="372.0" mnemonicParsing="false" onAction="#salaireFaible" prefHeight="25.0" prefWidth="149.0" text="Lister plus faible salaire" />
+      <Button fx:id="exportBtn" layoutX="70.0" layoutY="543.0" mnemonicParsing="false" onAction="#exporter" prefHeight="34.0" prefWidth="84.0" text="Exporter" />
+      <TextField fx:id="tfMin" layoutX="98.0" layoutY="279.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="tfMax" layoutX="181.0" layoutY="279.0" prefHeight="25.0" prefWidth="66.0" />
+      <Text fill="WHITE" layoutX="121.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <Text fill="WHITE" layoutX="204.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+      <Button fx:id="detailsBtn" layoutX="180.0" layoutY="543.0" mnemonicParsing="false" onAction="#details" prefHeight="34.0" prefWidth="93.0" text="Deatils" />
+      <RadioButton fx:id="rE" layoutX="95.0" layoutY="52.0" mnemonicParsing="false" text="Employee" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="salairie" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rV" layoutX="168.0" layoutY="52.0" mnemonicParsing="false" text="Employee" textFill="WHITE" toggleGroup="$salairie" />
+      <TextArea fx:id="tfDetail" layoutX="93.0" layoutY="417.0" prefHeight="117.0" prefWidth="159.0" />  
+   </children>
+</AnchorPane>

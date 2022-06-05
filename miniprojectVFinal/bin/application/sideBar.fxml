@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bp" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.sidebarController">
+   <left>
+      <VBox prefHeight="444.0" prefWidth="196.0" style="-fx-background-color: #001224;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#home" prefHeight="58.0" prefWidth="193.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0;" text="HOME" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#page1" prefHeight="59.0" prefWidth="193.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0;" text="Espace Entreprise" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#page2" prefHeight="59.0" prefWidth="191.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0;" text="Espace Salarie" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#page4" prefHeight="59.0" prefWidth="189.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0;" text="Espace Employeur" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#page3" prefHeight="60.0" prefWidth="190.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0;" text="Espace Vendeur" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="559.0" prefWidth="927.0" style="-fx-background-color: #142428;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="627.0" fitWidth="949.0" layoutX="-2.0">
+               <image>
+                  <Image url="@../../../../Downloads/welcome-neon-glow-dark-background-glowing-3600x2000-2068.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
